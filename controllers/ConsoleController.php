@@ -8,6 +8,11 @@ use yii\helpers\Console;
 /**
  * ConsoleController
  *
+ * ~~~
+ * $this->stdout("not silent\n", Console::BOLD);
+ * $this->vstdout("verbose\n", Console::BOLD);
+ * ~~~
+ *
  * @package yii2-advanced
  * @author Evgeniy Blinov <evgeniy_blinov@mail.ru>
 **/
