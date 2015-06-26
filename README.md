@@ -1,7 +1,23 @@
 [![MIT License][license-image]][license-url]
 
 # yii2-advanced
-yii2-advanced
+Advanced components for Yii2
+
+## Usage
+
+Add to composer.json
+
+```json
+    "require": {
+        "cent/yii2-advanced" : "v0.0.3"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url" : "https://github.com/EvgeniyBlinov/yii2-advanced"
+        }
+    ]
+```
 
 ## License
 
