@@ -4,24 +4,26 @@ namespace cent\yii2advanced\behaviors;
 use Yii;
 use yii\base\Behavior;
 
+use cent\yii2advanced\interfaces\IStatusModel;
+
 /**
- * ApiQueryBehavior
+ * StatusQueryBehavior
  *
  * @package yii2-advanced
  * @author Evgeniy Blinov <evgeniy_blinov@mail.ru>
 **/
-class ApiQueryBehavior extends Behavior
+class StatusQueryBehavior extends Behavior
 {
     /**
-     * With all relations
+     * Get enabled records
      *
      * @return ActiveQuery
      * @author Evgeniy Blinov <evgeniy_blinov@mail.ru>
      **/
-    public function allRelations()
+    public function enabled()
     {
         $modelClass = $this->owner->modelClass;
-        $this->owner->with($modelClass::getAllRelations());
+        $this->owner->with(['status' => IStatusModel::STATUS_ENABLED]);
         return $this->owner;
     }
 }

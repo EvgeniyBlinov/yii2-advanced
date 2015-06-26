@@ -2,6 +2,8 @@
 namespace cent\yii2advanced\components;
 
 use yii\db\ActiveQuery;
+use cent\yii2advanced\behaviors\ApiQueryBehavior;
+use cent\yii2advanced\behaviors\StatusQueryBehavior;
 
 /**
  * ActiveQueryContainer
@@ -11,6 +13,25 @@ use yii\db\ActiveQuery;
 **/
 class ActiveQueryContainer extends ActiveQuery
 {
+    /**
+     * Behaviors
+     *
+     * @return array of behaviors
+     * @author Evgeniy Blinov <evgeniy_blinov@mail.ru>
+     **/
+    public function behaviors()
+    {
+        $behaviors = [];
+        if (is_subclass_of($this->modelClass, '\cent\yii2advanced\interfaces\IApiModel')) {
+            $behaviors[] = ApiQueryBehavior::className();
+        }
+        if (is_subclass_of($this->modelClass, '\cent\yii2advanced\interfaces\IStatusModel')) {
+            $behaviors[] = StatusQueryBehavior::className();
+        }
+
+        return $behaviors;
+    }
+
     /**
      * Scopes
      *
