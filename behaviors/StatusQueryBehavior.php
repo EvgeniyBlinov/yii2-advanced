@@ -23,7 +23,7 @@ class StatusQueryBehavior extends Behavior
     public function enabled()
     {
         $modelClass = $this->owner->modelClass;
-        $this->owner->with(['status' => IStatusModel::STATUS_ENABLED]);
+        $this->owner->andWhere(['status' => IStatusModel::STATUS_ENABLED]);
         return $this->owner;
     }
 }
