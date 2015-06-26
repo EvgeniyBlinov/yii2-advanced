@@ -1,0 +1,19 @@
+{
+    "name"        : "cent/yii2-advanced",
+    "license"     : "MIT",
+    "version"     : "v0.0.1",
+    "type"        : "yii2-bundle",
+    "description" : "Cent yii2 advanced components",
+    "authors"     : [
+        {
+            "name": "Evgeniy Blinov",
+            "email": "evgeniy_blinov@mail.ru"
+        }
+    ],
+    "require": {
+        "php"                    : ">=5.4"
+    },
+    "autoload": {
+        "psr-4": { "cent\\yii2advanced\\": "" }
+    }
+}
