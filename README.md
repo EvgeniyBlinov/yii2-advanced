@@ -3,20 +3,11 @@
 # yii2-advanced
 Advanced components for Yii2
 
-## Usage
+## Install
 
-Add to composer.json
-
-```json
-    "require": {
-        "cent/yii2-advanced" : "v0.0.3"
-    },
-    "repositories": [
-        {
-            "type": "git",
-            "url" : "https://github.com/EvgeniyBlinov/yii2-advanced"
-        }
-    ]
+```sh
+composer config repositories.yii2-advanced git https://github.com/EvgeniyBlinov/yii2-advanced
+composer require "cent/yii2-advanced:v0.0.3"
 ```
 
 ## License
